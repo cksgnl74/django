@@ -49,13 +49,13 @@ class TestView(TestCase):
 
         response = self.client.get(post_001.get_absolute_url())
         self.assertEqual(response.status_code,200)
-        soup = BeautifulSoup(response.content , 'html_parser')
+        soup = BeautifulSoup(response.content , 'html.parser')
 
         navbar = soup.nav
         self.assertIn("Blog", navbar.text)
         self.assertIn("About Me", navbar.text)
 
-        self.assertEqual(post_001.title, soup.title.text)
+        self.assertIn(post_001.title, soup.title.text)
 
         main_area = soup.find('div', id='main-area')
         post_area = main_area.find('div', id='post-area')
