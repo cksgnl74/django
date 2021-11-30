@@ -5,7 +5,7 @@ from blog.models import Post
 
 
 class TestView(TestCase):
-    def setup(self):
+    def setUp(self):
         self.client = Client()
         self.user_trump = User.objects.create_user(username='trump', password='somepassword')
         
