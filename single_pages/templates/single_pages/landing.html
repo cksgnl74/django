@@ -33,7 +33,7 @@
                     {% for post in recent_posts  %}
                         <div class="card mt-1 mb-2 card_border">
                             <div class="card-body">
-                                <h6><a href="{{ post.get_absolute_url }}" class="text-decoration-none text-muted">{{ post.title }}</a></h6>
+                                <h6><a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark font-weight-bold">{{ post.title }}</a></h6>
                                 <span class="badge badge-pill badge-light float-right">
                                     <img class="mr-1 rounded-circle" width="20px" src="{{ post.get_avatar_url }}" alt="{{ post.author }}" />
                                     {{ post.author.username }}&nbsp;&nbsp;{{ post.created_at }}
