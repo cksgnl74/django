@@ -4,7 +4,7 @@
     {{ post.title }} - Blog
 {% endblock %}
 {% block main_area %}
-    <div id="post-area">
+    <div id="post-area" class="mt-4">
 
     <!-- Post content-->
         <article>
@@ -14,7 +14,7 @@
                 <span class="badge badge-secondary float-right">미분류</span>
             {%  endif %}
             <!-- Post header-->
-            <header class="mb-4">
+            <header class="mb-4 title_header" >
                 <!-- Post title-->
                 <h1 class="fw-bolder mb-1">{{ post.title }}</h1>
                 {% if post.hook_text %}

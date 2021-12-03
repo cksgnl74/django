@@ -8,6 +8,38 @@
         <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
 
     <script src="https://kit.fontawesome.com/726bbd6862.js" crossorigin="anonymous"></script>
+    <style>
+
+        body {
+            background: url('/static/single_pages/images/background2.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+        }
+
+        #main-area{
+            background: white;
+            border-radius: 2%;
+            box-shadow: 5px 5px 5px black , 0 0 5px black ,0 0 15px black  ;
+        }
+
+        .border_card{
+            border-radius: 2%;
+            box-shadow: 5px 5px 5px black , 0 0 5px black ,0 0 15px black  ;
+
+        }
+
+        .title_header{
+            background-color: rgba(0,0,0,.03);
+        }
+
+        .card_border{
+            border: 1px solid rgba(0,0,0,.2) !important;
+            box-shadow: 5px 5px 5px black , 0 0 5px black ,0 0 15px black  ;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -25,7 +57,7 @@
 
             <div class="col-md-4 col-lg-3">
                 <!-- Search Widget -->
-                <div class="card my-4">
+                <div class="card my-4 border_card">
                     <h5 class="card-header">Search</h5>
                     <div class="card-body">
                         <div class="input-group">
@@ -38,7 +70,7 @@
                 </div>
 
                 <!-- Categories Widget -->
-                <div class="card my-4" id="categories-card">
+                <div class="card my-4 border_card" id="categories-card">
                     <h5 class="card-header">Categories</h5>
                     <div class="card-body">
                         <div class="row">

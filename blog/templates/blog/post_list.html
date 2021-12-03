@@ -1,15 +1,18 @@
 {%  extends 'blog/base.html' %}
 {% block main_area %}
 
-    {% if user.is_authenticated %}
-        {% if user.is_superuser or user.is_staff %}
-            <a class="btn btn-info btn-sm float-right" href="/blog/create_post/" role="button">
-            <i class="fas fa-pen"></i>&nbsp;&nbsp;New Post
-            </a>
-        {%  endif %}
-    {% endif %}
 
-    <h1>Blog
+
+    <h1 class="mt-3">
+
+        ( . _ .)
+        {% if user.is_authenticated %}
+            {% if user.is_superuser or user.is_staff %}
+                <a class="btn btn-info btn-sm float-right" href="/blog/create_post/" role="button">
+                <i class="fas fa-pen"></i>&nbsp;&nbsp;New Post
+                </a>
+            {%  endif %}
+        {% endif %}
         {% if search_info %}<small class="text-muted">{{ search_info }}</small>{%  endif %}
         {% if category %}<span class="badge badge-secondary">{{ category }}</span>{%  endif %}
         {%  if tag %}
@@ -19,7 +22,7 @@
     {% if post_list.exists %}
         {% for p in post_list %}
     <!-- Blog Post -->
-            <div class="card mb-4" id="post-{{ p.pk }}">
+            <div class="card mb-4 card_border" id="post-{{ p.pk }}">
                 {% if p.head_image %}
                     <img class="card-img-top" src="{{ p.head_image.url }}" alt="{{ p }} head image">
                 {%  else %}
