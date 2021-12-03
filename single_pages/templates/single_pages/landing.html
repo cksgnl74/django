@@ -3,7 +3,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title> 챠니</title>
+    <title>챠니의 잡동사니</title>
     <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
     <link rel="stylesheet" href="{% static 'single_pages/css/landing.css' %}" media="screen">
 
@@ -12,7 +12,7 @@
 
         .card_border {
 
-           box-shadow: 2px 2px 7px black , 0 0 10px black ,0 0 14px white  ;
+           box-shadow: 1px 1px 1px black , 0 0 1px black ,0 0 4px white  ;
         }
 
     </style>
@@ -29,7 +29,7 @@
 
                 </div>
                 <div class="col-lg-6 mt-5">
-                    <h5 class="text-light">최근 포스트</h5>
+                    <h5 class="text-light">지난 글</h5>
                     {% for post in recent_posts  %}
                         <div class="card mt-1 mb-2 card_border">
                             <div class="card-body">

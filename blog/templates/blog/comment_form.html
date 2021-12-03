@@ -3,7 +3,7 @@
 {%  block head_title %}Edit Comment - Blog{% endblock %}
 
 {% block main_area %}
-    <h1>Edit Comment</h1>
+    <h1>댓글 수정</h1>
     <hr/>
     <form method="post" enctype="multipart/form-data" id="comment-form">
         {% csrf_token %}
@@ -12,7 +12,7 @@
 
         <br/>
 
-        <button type="submit" class="btn btn-primary float-right">Submit</button>
+        <button type="submit" class="btn btn-primary float-right">변경</button>
     </form>
 
 {% endblock %}
